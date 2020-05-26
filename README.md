@@ -1,2 +1,2 @@
 # introduction-page-typescript
-Create a introduction page using ReactJS with Typescript
+Create an introduction page using ReactJS with Typescript
