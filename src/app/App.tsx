@@ -1,24 +1,22 @@
 import React, { Suspense } from "react";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { useSelector } from "react-redux";
 
-import reducers from "./store";
+import { Store } from "./store/types";
+import { IStateStylesSettings } from "./store/reducers/stylesSettingsTypes";
 
 import GlobalStyle from "./styles";
 import Router from "./routes";
 
-const store = createStore(reducers, composeWithDevTools());
-
 function App() {
+  const style = useSelector<Store, IStateStylesSettings>(
+    (state) => state.stylesSettingsReducer
+  );
   return (
     <Suspense fallback={() => <>Carregando...</>}>
-      <Provider store={store}>
-        <>
-          <GlobalStyle />
-          <Router />
-        </>
-      </Provider>
+      <>
+        <GlobalStyle background={style.settings.background} />
+        <Router />
+      </>
     </Suspense>
   );
 }

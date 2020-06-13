@@ -4,3 +4,12 @@ export interface IAction {
     theme: string;
   };
 }
+
+export interface IStateStylesSettings {
+  theme: string;
+  settings: {
+    background: string;
+    toogleBackground: string;
+    toogleIconColor: string;
+  };
+}
