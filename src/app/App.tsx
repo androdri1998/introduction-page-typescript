@@ -12,7 +12,7 @@ function App() {
     (state) => state.stylesSettingsReducer
   );
   return (
-    <Suspense fallback={() => <>Carregando...</>}>
+    <Suspense fallback={<>Carregando...</>}>
       <>
         <GlobalStyle background={style.settings.background} />
         <Router />

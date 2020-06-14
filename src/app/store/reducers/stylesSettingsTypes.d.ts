@@ -9,7 +9,9 @@ export interface IStateStylesSettings {
   theme: string;
   settings: {
     background: string;
-    toogleBackground: string;
-    toogleIconColor: string;
+    toggle: {
+      background: string;
+      iconColor: string;
+    };
   };
 }
