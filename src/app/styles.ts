@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { IGlobalStyle } from "./AppTypes";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -10,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
   };
   html, body, #root {
     height: 100%;
-    background: ${(props: IGlobalStyle) => props.background};
   };
 `;
 

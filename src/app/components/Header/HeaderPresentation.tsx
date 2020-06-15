@@ -1,6 +1,7 @@
 import React from "react";
 
 import Toggle from "../Toggle";
+import Nav from "../Nav";
 
 import { ContainerHeader } from "./styles";
 
@@ -10,6 +11,7 @@ const HeaderPresentation: React.FC<IPropsPresentation> = () => {
   return (
     <ContainerHeader>
       <Toggle />
+      <Nav />
     </ContainerHeader>
   );
 };

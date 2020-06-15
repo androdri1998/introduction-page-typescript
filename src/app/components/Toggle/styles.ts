@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 import { IToggleProps } from "./types";
 import { themes } from "../../utils/constants";
@@ -35,10 +35,15 @@ export const Toggle = styled.div`
   height: 40px;
   width: 80px;
   border-radius: 30px;
-  background: ${(props: IToggleProps) => props.background};
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: 0.8s;
+  ${(props: IToggleProps) =>
+    props.background &&
+    css`
+      background: ${props.background};
+    `};
 `;
 
 export const ToggleIconLight = styled.div`

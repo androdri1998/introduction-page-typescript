@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { MdBrightness4 } from "react-icons/md";
 
 import {
@@ -11,11 +11,13 @@ import {
 } from "./styles";
 
 import { IPropsPresentation, TTheme } from "./types";
-import { Store } from "../../store/types";
 import { IStateStylesSettings } from "../../store/reducers/stylesSettingsTypes";
 import { themes } from "../../utils/constants";
+import { Store } from "../../store/types";
+import { updateTheme } from "../../store/reducers/stylesSettings";
 
 const TogglePresentation: React.FC<IPropsPresentation> = () => {
+  const dispatch = useDispatch();
   const style = useSelector<Store, IStateStylesSettings>(
     (state) => state.stylesSettingsReducer
   );
@@ -27,7 +29,10 @@ const TogglePresentation: React.FC<IPropsPresentation> = () => {
   }, [style.theme]);
 
   function handlerSwitchTheme(theme: string) {
-    setTheme((theme === themes.LIGHT ? themes.DARK : themes.LIGHT) as TTheme);
+    const response = updateTheme(
+      theme === themes.LIGHT ? themes.DARK : themes.LIGHT
+    );
+    dispatch(response);
   }
 
   return (
