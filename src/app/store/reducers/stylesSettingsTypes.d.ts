@@ -10,6 +10,7 @@ export interface IStateStylesSettings {
   settings: {
     background: string;
     textColor: string;
+    lineColor: string;
     toggle: {
       background: string;
       iconColor: string;

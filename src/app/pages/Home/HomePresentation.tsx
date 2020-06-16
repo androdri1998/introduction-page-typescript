@@ -5,6 +5,7 @@ import { Store } from "../../store/types";
 import { IStateStylesSettings } from "../../store/reducers/stylesSettingsTypes";
 
 import Header from "../../components/Header";
+import CenterLine from "../../components/CenterLine";
 
 import { Container } from "./styles";
 
@@ -17,6 +18,7 @@ const HomePresentation: React.FC<IPropsPresentation> = () => {
   return (
     <Container background={style.settings.background}>
       <Header />
+      <CenterLine />
     </Container>
   );
 };
