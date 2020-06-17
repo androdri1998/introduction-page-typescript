@@ -38,19 +38,34 @@ const TogglePresentation: React.FC<IPropsPresentation> = () => {
   return (
     <ToggleContainer>
       <ToggleContent>
-        <Toggle background={style.settings.toggle.background} theme={theme}>
+        <Toggle
+          background={
+            theme === themes.LIGHT
+              ? style.settings.color_3
+              : style.settings.color_5
+          }
+          theme={theme}
+        >
           {theme === themes.LIGHT ? (
             <ToggleIconLight onClick={() => handlerSwitchTheme(theme)}>
               <MdBrightness4
                 size={60}
-                color={style.settings.toggle.iconColor}
+                color={
+                  theme === themes.LIGHT
+                    ? style.settings.color_4
+                    : style.settings.color_6
+                }
               />
             </ToggleIconLight>
           ) : (
             <ToggleIconDark onClick={() => handlerSwitchTheme(theme)}>
               <MdBrightness4
                 size={60}
-                color={style.settings.toggle.iconColor}
+                color={
+                  theme === themes.LIGHT
+                    ? style.settings.color_4
+                    : style.settings.color_6
+                }
               />
             </ToggleIconDark>
           )}

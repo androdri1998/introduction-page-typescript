@@ -8,12 +8,13 @@ export interface IAction {
 export interface IStateStylesSettings {
   theme: string;
   settings: {
-    background: string;
-    textColor: string;
-    lineColor: string;
-    toggle: {
-      background: string;
-      iconColor: string;
-    };
+    background_light: string;
+    background_dark: string;
+    color_1: string;
+    color_2: string;
+    color_3: string;
+    color_4: string;
+    color_5: string;
+    color_6: string;
   };
 }

@@ -4,16 +4,16 @@ import { ILineProps, IContainerIconProps } from "./types";
 export const Container = styled.div`
   display: flex;
   width: 160px;
-  flex: 1;
+  height: 760px;
   align-self: center;
   justify-content: center;
-  margin-top: 80px;
   flex-direction: column;
 `;
 
 export const Line = styled.div`
   display: flex;
-  width: 5px;
+  min-width: 5px;
+  height: 
   border-radius: 15px;
   flex: 1;
   align-self: center;

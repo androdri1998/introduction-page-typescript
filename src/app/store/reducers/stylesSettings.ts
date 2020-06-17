@@ -1,5 +1,5 @@
 import { IAction } from "./stylesSettingsTypes";
-import { lightTheme, darkTheme } from "../../utils/themeSettings";
+import { colorsTheme } from "../../utils/themeSettings";
 import { themes } from "../../utils/constants";
 
 const stylesSettingsActions = {
@@ -7,8 +7,8 @@ const stylesSettingsActions = {
 };
 
 const INITIAL_STATE = {
-  theme: themes.LIGHT,
-  settings: lightTheme,
+  theme: themes.DARK,
+  settings: colorsTheme,
 };
 
 export const stylesSettingsReducer = (
@@ -20,7 +20,6 @@ export const stylesSettingsReducer = (
       return {
         ...state,
         theme: payload.theme,
-        settings: payload.theme === themes.LIGHT ? lightTheme : darkTheme,
       };
     default:
       return state;
