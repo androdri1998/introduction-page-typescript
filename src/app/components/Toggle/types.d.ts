@@ -1,6 +1,11 @@
 export interface IPropsContainer {}
 
-export interface IPropsPresentation {}
+export interface IPropsPresentation {
+  toggleBackground: string;
+  theme: string;
+  iconColor: string;
+  handlerSwitchTheme: Function;
+}
 
 export interface IToggleProps {
   background: string;

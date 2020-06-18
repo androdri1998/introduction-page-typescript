@@ -34,6 +34,16 @@ const HomeContainer: React.FC<IPropsContainer> = () => {
       profilePhoto={content.linkProfilePhoto}
       firstname={content.firstname}
       lastname={content.lastname}
+      colorTextPanel={
+        style.theme === themes.LIGHT
+          ? style.settings.color_2
+          : style.settings.color_6
+      }
+      backgroundLineColor={
+        style.theme === themes.LIGHT
+          ? style.settings.color_1
+          : style.settings.color_5
+      }
     />
   );
 };

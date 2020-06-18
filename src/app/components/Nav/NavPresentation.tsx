@@ -1,58 +1,19 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
 import { Container, ItemNav } from "./styles";
-import { themes } from "../../utils/constants";
 
 import { IPropsPresentation } from "./types";
-import { IStateStylesSettings } from "../../store/reducers/stylesSettingsTypes";
-import { Store } from "../../store/types";
 
-const NavPresentation: React.FC<IPropsPresentation> = () => {
+const NavPresentation: React.FC<IPropsPresentation> = ({ color }) => {
   const { t } = useTranslation();
-  const style = useSelector<Store, IStateStylesSettings>(
-    (state) => state.stylesSettingsReducer
-  );
 
   return (
     <Container>
-      <ItemNav
-        color={
-          style.theme === themes.LIGHT
-            ? style.settings.color_2
-            : style.settings.color_6
-        }
-      >
-        {t("NAV_REPOSITORIES")}
-      </ItemNav>
-      <ItemNav
-        color={
-          style.theme === themes.LIGHT
-            ? style.settings.color_2
-            : style.settings.color_6
-        }
-      >
-        {t("NAV_ABOUT")}
-      </ItemNav>
-      <ItemNav
-        color={
-          style.theme === themes.LIGHT
-            ? style.settings.color_2
-            : style.settings.color_6
-        }
-      >
-        {t("NAV_SKILLS")}
-      </ItemNav>
-      <ItemNav
-        color={
-          style.theme === themes.LIGHT
-            ? style.settings.color_2
-            : style.settings.color_6
-        }
-      >
-        {t("NAV_EXPERIENCES")}
-      </ItemNav>
+      <ItemNav color={color}>{t("NAV_REPOSITORIES")}</ItemNav>
+      <ItemNav color={color}>{t("NAV_ABOUT")}</ItemNav>
+      <ItemNav color={color}>{t("NAV_SKILLS")}</ItemNav>
+      <ItemNav color={color}>{t("NAV_EXPERIENCES")}</ItemNav>
     </Container>
   );
 };

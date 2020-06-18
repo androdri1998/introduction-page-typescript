@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
 import { MdBrightness4 } from "react-icons/md";
 
 import {
@@ -10,63 +9,26 @@ import {
   ToggleIconDark,
 } from "./styles";
 
-import { IPropsPresentation, TTheme } from "./types";
-import { IStateStylesSettings } from "../../store/reducers/stylesSettingsTypes";
+import { IPropsPresentation } from "./types";
 import { themes } from "../../utils/constants";
-import { Store } from "../../store/types";
-import { updateTheme } from "../../store/reducers/stylesSettings";
 
-const TogglePresentation: React.FC<IPropsPresentation> = () => {
-  const dispatch = useDispatch();
-  const style = useSelector<Store, IStateStylesSettings>(
-    (state) => state.stylesSettingsReducer
-  );
-
-  const [theme, setTheme] = useState<TTheme>("dark" as TTheme);
-
-  useEffect(() => {
-    setTheme(style.theme as TTheme);
-  }, [style.theme]);
-
-  function handlerSwitchTheme(theme: string) {
-    const response = updateTheme(
-      theme === themes.LIGHT ? themes.DARK : themes.LIGHT
-    );
-    dispatch(response);
-  }
-
+const TogglePresentation: React.FC<IPropsPresentation> = ({
+  iconColor,
+  handlerSwitchTheme,
+  theme,
+  toggleBackground,
+}) => {
   return (
     <ToggleContainer>
       <ToggleContent>
-        <Toggle
-          background={
-            theme === themes.LIGHT
-              ? style.settings.color_3
-              : style.settings.color_5
-          }
-          theme={theme}
-        >
+        <Toggle background={toggleBackground} theme={theme}>
           {theme === themes.LIGHT ? (
             <ToggleIconLight onClick={() => handlerSwitchTheme(theme)}>
-              <MdBrightness4
-                size={60}
-                color={
-                  theme === themes.LIGHT
-                    ? style.settings.color_4
-                    : style.settings.color_6
-                }
-              />
+              <MdBrightness4 size={60} color={iconColor} />
             </ToggleIconLight>
           ) : (
             <ToggleIconDark onClick={() => handlerSwitchTheme(theme)}>
-              <MdBrightness4
-                size={60}
-                color={
-                  theme === themes.LIGHT
-                    ? style.settings.color_4
-                    : style.settings.color_6
-                }
-              />
+              <MdBrightness4 size={60} color={iconColor} />
             </ToggleIconDark>
           )}
         </Toggle>

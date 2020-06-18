@@ -15,6 +15,11 @@ import {
   LastNameTextProfile,
   OthersText,
   ContainerOthers,
+  TextPanel,
+  ContainerDrawHorizontal,
+  ContainerDrawVertical,
+  Line,
+  ContainerLine,
 } from "./styles";
 
 import { IPropsPresentation } from "./types";
@@ -27,6 +32,8 @@ const HomePresentation: React.FC<IPropsPresentation> = ({
   lastname,
   colorOthersText,
   linkToLinkedin,
+  colorTextPanel,
+  backgroundLineColor,
 }) => {
   const { t } = useTranslation();
 
@@ -34,7 +41,53 @@ const HomePresentation: React.FC<IPropsPresentation> = ({
     <Container background={backgroundColor}>
       <Header />
       <Content>
-        <ContainerDraw />
+        <ContainerDraw>
+          <ContainerDrawVertical>
+            <TextPanel color={colorTextPanel} marginTop={20}>
+              {t("TEXT_PANEL_DEVELOPER")}
+            </TextPanel>
+            <ContainerDrawHorizontal>
+              <ContainerLine>
+                <Line background={backgroundLineColor} />
+              </ContainerLine>
+              <ContainerDrawVertical>
+                <ContainerDrawVertical>
+                  <TextPanel color={colorTextPanel} marginTop={10}>
+                    {t("TEXT_PANEL_BACKEND")}
+                  </TextPanel>
+                  <ContainerDrawHorizontal>
+                    <ContainerLine>
+                      <Line background={backgroundLineColor} />
+                    </ContainerLine>
+                    <ContainerDrawVertical>
+                      <TextPanel color={colorTextPanel} marginTop={10}>
+                        {t("TEXT_PANEL_NODEJS")}
+                      </TextPanel>
+                      <TextPanel color={colorTextPanel} marginTop={10}>
+                        {t("TEXT_PANEL_PHP")}
+                      </TextPanel>
+                    </ContainerDrawVertical>
+                  </ContainerDrawHorizontal>
+                </ContainerDrawVertical>
+                <ContainerDrawVertical>
+                  <TextPanel color={colorTextPanel} marginTop={10}>
+                    {t("TEXT_PANEL_FRONTEND")}
+                  </TextPanel>
+                  <ContainerDrawHorizontal>
+                    <ContainerLine>
+                      <Line background={backgroundLineColor} />
+                    </ContainerLine>
+                    <ContainerDrawVertical>
+                      <TextPanel color={colorTextPanel} marginTop={10}>
+                        {t("TEXT_PANEL_REACT")}
+                      </TextPanel>
+                    </ContainerDrawVertical>
+                  </ContainerDrawHorizontal>
+                </ContainerDrawVertical>
+              </ContainerDrawVertical>
+            </ContainerDrawHorizontal>
+          </ContainerDrawVertical>
+        </ContainerDraw>
         <CenterLine />
         <ContainerProfile>
           <ImageProfile src={profilePhoto} />
