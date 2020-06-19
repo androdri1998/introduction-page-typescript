@@ -7,6 +7,7 @@ export const ItemNav = styled.a`
   font-size: 1.6rem;
   trasition: 0.8s;
   margin-left: 50px;
+  cursor: pointer;
   ${(props: IItemNavProps) =>
     props.color &&
     css`

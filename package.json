@@ -16,11 +16,12 @@
     "react-dom": "16.13.1",
     "react-i18next": "11.5.0",
     "react-icons": "3.10.0",
-    "react-redux": "^7.2.0",
+    "react-redux": "7.2.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
+    "react-scroll": "1.7.16",
+    "redux": "4.0.5",
+    "redux-devtools-extension": "2.13.8",
     "styled-components": "5.1.1",
     "typescript": "3.9.3"
   },
@@ -47,8 +48,9 @@
     ]
   },
   "devDependencies": {
-    "@types/react-redux": "^7.1.9",
+    "@types/react-redux": "7.1.9",
     "@types/react-router-dom": "5.1.5",
+    "@types/react-scroll": "^1.5.5",
     "@types/styled-components": "5.1.0"
   }
 }

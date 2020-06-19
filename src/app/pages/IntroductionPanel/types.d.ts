@@ -1,11 +1,14 @@
 export interface IPropsContainer {}
 
 export interface IPropsPresentation {
-  backgroundColor: string;
-}
-
-export interface IContainerProps {
-  background: string;
+  profilePhoto: string;
+  colorTextName: string;
+  colorOthersText: string;
+  linkToLinkedin: string;
+  firstname: string;
+  lastname: string;
+  colorTextPanel: string;
+  backgroundLineColor: string;
 }
 
 export interface ITextNameProfile {

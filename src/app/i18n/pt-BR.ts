@@ -1,9 +1,9 @@
 export default {
   translation: {
     NAV_REPOSITORIES: "Repositórios",
+    NAV_HOME: "Início",
     NAV_ABOUT: "Sobre",
     NAV_SKILLS: "Habilidades",
-    NAV_EXPERIENCES: "Experiências",
     SEE_ON_LINKEDIN: "Ver no LinkedIn",
     TEXT_PANEL_DEVELOPER: "Developer",
     TEXT_PANEL_BACKEND: "Back-end",

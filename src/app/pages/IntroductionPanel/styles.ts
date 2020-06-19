@@ -1,27 +1,17 @@
 import styled, { css } from "styled-components";
-import {
-  IContainerProps,
-  ITextNameProfile,
-  IContainerOthers,
-  ITextPanel,
-  ILine,
-} from "./types";
-
-export const Container = styled.main`
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  transition: 0.8s;
-  ${(props: IContainerProps) =>
-    props.background &&
-    css`
-      background: ${props.background};
-    `};
-`;
+import { ITextNameProfile, IContainerOthers, ITextPanel, ILine } from "./types";
 
 export const Content = styled.section`
   display: flex;
+  height: 100vh;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const AlignContent = styled.div`
+  display: flex;
   flex: 1;
+  margin-top: 130px;
   flex-direction: row;
   justify-content: space-between;
 `;
