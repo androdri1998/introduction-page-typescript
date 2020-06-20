@@ -3,6 +3,11 @@ export interface IContent {
   lastname: string;
   linkProfilePhoto: string;
   linkToLinkedin: string;
+  skills: {
+    technology: string;
+    percentage: number;
+    color: string;
+  }[];
 }
 
 export const content: IContent = {
@@ -10,4 +15,11 @@ export const content: IContent = {
   lastname: "LAST_NAME",
   linkProfilePhoto: "LINK_TO_PROFILE_PHOTO",
   linkToLinkedin: "LINK_TO_LINKEDIN",
+  skills: [
+    {
+      technology: "NAME_TECHNOLOGY",
+      percentage: 0, // knowledge measured in percentage
+      color: "ACCENT_COLOR",
+    },
+  ],
 };
