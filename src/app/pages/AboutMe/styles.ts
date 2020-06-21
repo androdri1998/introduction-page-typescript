@@ -1,5 +1,10 @@
 import styled, { css } from "styled-components";
-import { ITitlePage, IContainerIconProps, IContainerOthers } from "./types";
+import {
+  ITitlePage,
+  IContainerOthers,
+  IContainerIconProps,
+  IContentText,
+} from "./types";
 
 export const Content = styled.section`
   display: flex;
@@ -15,12 +20,25 @@ export const AlignContent = styled.div`
   align-items: center;
 `;
 
-export const ContentList = styled.div`
+export const ContentText = styled.div`
   display: flex;
   margin-top: 60px;
   width: 100%;
   max-width: 900px;
   flex: 1;
+  flex-direction: column;
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    transition: 0.8s;
+    ${(props: IContentText) =>
+      props.color &&
+      css`
+        color: ${props.color};
+      `};
+  }
 `;
 
 export const TitlePage = styled.p`
@@ -88,4 +106,5 @@ export const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-bottom: 100px;
 `;

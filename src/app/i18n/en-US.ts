@@ -12,5 +12,6 @@ export default {
     TEXT_PANEL_FRONTEND: "Front-end",
     TEXT_PANEL_REACT: "React JS",
     NAV_HOME: "Home",
+    SEE_MORE_ON_LINKEDIN: "See more on Github",
   },
 };

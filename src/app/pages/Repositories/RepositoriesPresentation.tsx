@@ -1,48 +1,48 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { BsChevronCompactDown } from "react-icons/bs";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FiGithub } from "react-icons/fi";
 
-import ListSkills from "../../components/ListSkills";
+import ListRepositories from "../../components/ListRepositories";
 
 import {
   Content,
   AlignContent,
   TitlePage,
   ContentList,
-  ContainerIcon,
-  OthersText,
   ContainerOthers,
+  OthersText,
+  ContainerIcon,
   Footer,
 } from "./styles";
 
 import { IPropsPresentation } from "./types";
 
-const SkillsPresentation: React.FC<IPropsPresentation> = ({
+const RepositoriesPresentation: React.FC<IPropsPresentation> = ({
   colorTitle,
-  skills,
+  repositories,
   colorIcon,
   colorOthersText,
-  linkToLinkedin,
+  linkToGithub,
 }) => {
   const { t } = useTranslation();
   return (
     <Content>
       <AlignContent>
-        <TitlePage color={colorTitle}>{t("NAV_SKILLS")}</TitlePage>
+        <TitlePage color={colorTitle}>{t("NAV_REPOSITORIES")}</TitlePage>
         <ContentList>
-          <ListSkills skills={skills} />
+          <ListRepositories repositories={repositories} />
         </ContentList>
         <Footer>
           <ContainerOthers color={colorOthersText}>
             <OthersText
-              href={linkToLinkedin}
+              href={linkToGithub}
               target="_blank"
               rel="noreferrer noopener"
             >
-              {t("SEE_ON_LINKEDIN")}
+              {t("SEE_MORE_ON_LINKEDIN")}
             </OthersText>
-            <FaLinkedinIn size={35} />
+            <FiGithub size={35} />
           </ContainerOthers>
           <ContainerIcon color={colorIcon}>
             <BsChevronCompactDown size={95} />
@@ -53,4 +53,4 @@ const SkillsPresentation: React.FC<IPropsPresentation> = ({
   );
 };
 
-export default SkillsPresentation;
+export default RepositoriesPresentation;

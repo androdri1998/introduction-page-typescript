@@ -8,6 +8,13 @@ export interface IContent {
     percentage: number;
     color: string;
   }[];
+  repositories: {
+    name: string;
+    technology: string[];
+    coverPhoto: string;
+    linkToRepository: string;
+  }[];
+  aboutMe: string[];
 }
 
 export const content: IContent = {
@@ -22,4 +29,13 @@ export const content: IContent = {
       color: "ACCENT_COLOR",
     },
   ],
+  repositories: [
+    {
+      name: "NAME_REPOSITORY",
+      coverPhoto: "LINK_TO_COVER_PHOTO",
+      linkToRepository: "LINK_TO_REPOSITORY",
+      technology: ["NAME_TECHNOLOGY"],
+    },
+  ],
+  aboutMe: ["PARAGRAPH_1", "PARAGRAPH_2", "PARAGRAPH_3"],
 };

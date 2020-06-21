@@ -1,38 +1,36 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { BsChevronCompactDown } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
-
-import ListSkills from "../../components/ListSkills";
 
 import {
   Content,
   AlignContent,
+  ContentText,
   TitlePage,
-  ContentList,
-  ContainerIcon,
-  OthersText,
-  ContainerOthers,
   Footer,
+  ContainerOthers,
+  OthersText,
 } from "./styles";
 
 import { IPropsPresentation } from "./types";
 
-const SkillsPresentation: React.FC<IPropsPresentation> = ({
+const AboutMePresentation: React.FC<IPropsPresentation> = ({
   colorTitle,
-  skills,
-  colorIcon,
   colorOthersText,
   linkToLinkedin,
+  aboutMe,
+  colorParagraph,
 }) => {
   const { t } = useTranslation();
   return (
     <Content>
       <AlignContent>
-        <TitlePage color={colorTitle}>{t("NAV_SKILLS")}</TitlePage>
-        <ContentList>
-          <ListSkills skills={skills} />
-        </ContentList>
+        <TitlePage color={colorTitle}>{t("NAV_ABOUT")}</TitlePage>
+        <ContentText color={colorParagraph}>
+          {aboutMe.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </ContentText>
         <Footer>
           <ContainerOthers color={colorOthersText}>
             <OthersText
@@ -44,13 +42,10 @@ const SkillsPresentation: React.FC<IPropsPresentation> = ({
             </OthersText>
             <FaLinkedinIn size={35} />
           </ContainerOthers>
-          <ContainerIcon color={colorIcon}>
-            <BsChevronCompactDown size={95} />
-          </ContainerIcon>
         </Footer>
       </AlignContent>
     </Content>
   );
 };
 
-export default SkillsPresentation;
+export default AboutMePresentation;

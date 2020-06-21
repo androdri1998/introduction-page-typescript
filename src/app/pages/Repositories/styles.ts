@@ -10,7 +10,7 @@ export const Content = styled.section`
 export const AlignContent = styled.div`
   display: flex;
   flex: 1;
-  margin-top: 150px;
+  margin-top: 100px;
   flex-direction: column;
   align-items: center;
 `;

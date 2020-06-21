@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { IItemNavProps } from "./types";
 
 export const Container = styled.nav``;
-export const ItemNav = styled.a`
+export const ItemNav = styled.span`
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   trasition: 0.8s;

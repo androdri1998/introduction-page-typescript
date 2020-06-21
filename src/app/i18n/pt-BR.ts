@@ -11,5 +11,6 @@ export default {
     TEXT_PANEL_PHP: "PHP",
     TEXT_PANEL_FRONTEND: "Front-end",
     TEXT_PANEL_REACT: "React JS",
+    SEE_MORE_ON_LINKEDIN: "Ver mais no Github",
   },
 };
