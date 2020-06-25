@@ -21,6 +21,10 @@ export const ContainerDraw = styled.div`
   flex: 1;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: 1040px) {
+    display: none;
+  }
 `;
 
 export const ContainerDrawVertical = styled.div`
@@ -82,6 +86,10 @@ export const ContainerOthers = styled.div`
         color: ${props.color};
       `};
   }
+
+  @media (max-width: 1040px) {
+    margin-top: 100px;
+  }
 `;
 
 export const ImageProfile = styled.img`
@@ -89,6 +97,12 @@ export const ImageProfile = styled.img`
   width: 320px;
   border-radius: 50%;
   margin-top: 60px;
+
+  @media (max-width: 1040px) {
+    height: 240px;
+    width: 240px;
+    margin-top: 0px;
+  }
 `;
 
 export const TextNameProfile = styled.p`
@@ -103,6 +117,14 @@ export const TextNameProfile = styled.p`
     css`
       color: ${props.color};
     `};
+  
+  @media(max-width: 1366px) {
+    font-size: 4rem;
+  }
+
+  @media(max-width: 1040px) {
+    font-size: 3rem;
+  }
 `;
 
 export const OthersText = styled.a`
@@ -112,13 +134,17 @@ export const OthersText = styled.a`
   font-family: font-family: 'Roboto', sans-serif;
   transition: 0.8s;
   margin-right: 5px;
+  align-self: flex-start;
 `;
 
 export const FisrtNameTextProfile = styled(TextNameProfile)`
-  margin-left: -280px;
+  margin-left: -180px;
 `;
 export const LastNameTextProfile = styled(TextNameProfile)`
   margin-left: 60px;
+  @media (max-width: 1040px) {
+    font-size: 3rem;
+  }
 `;
 
 export const TextPanel = styled.p`
@@ -133,4 +159,12 @@ export const TextPanel = styled.p`
     css`
       color: ${props.color};
     `};
+
+  @media(max-width: 1366px) {
+    font-size: 4rem;
+  }
+
+  @media(max-width: 1040px) {
+    font-size: 3.5rem;
+  }
 `;

@@ -8,6 +8,10 @@ export const Container = styled.div`
   align-self: center;
   justify-content: center;
   flex-direction: column;
+
+  @media (max-width: 1040px) {
+    display: none;
+  }
 `;
 
 export const Line = styled.div`

@@ -13,6 +13,10 @@ export const AlignContent = styled.div`
   margin-top: 100px;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 1040px) {
+    margin-top: 160px;
+  }
 `;
 
 export const ContentList = styled.div`
@@ -55,6 +59,7 @@ export const ContainerOthers = styled.div`
   flex: 1;
   margin-top: 70px;
   justify-content: center;
+  align-items: center;
 
   svg {
     transition: 0.8s;
@@ -72,6 +77,12 @@ export const ContainerOthers = styled.div`
       css`
         color: ${props.color};
       `};
+  }
+
+  @media (max-width: 1040px) {
+    a {
+      font-size: 1.5rem;
+    }
   }
 `;
 

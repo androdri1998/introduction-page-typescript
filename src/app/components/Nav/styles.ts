@@ -13,4 +13,8 @@ export const ItemNav = styled.span`
     css`
       color: ${props.color};
     `};
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `;

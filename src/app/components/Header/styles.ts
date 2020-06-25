@@ -9,4 +9,8 @@ export const ContainerHeader = styled.div`
   justify-content: space-between;
   position: fixed;
   top: 0;
+
+  @media (max-width: 1040px) {
+    padding: 0 30px 0 10px;
+  }
 `;
