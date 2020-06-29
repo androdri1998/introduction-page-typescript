@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { FaLinkedinIn } from "react-icons/fa";
 
 import CenterLine from "../../components/CenterLine";
+import GoTo from "../../components/GoTo";
 
 import {
   Content,
@@ -19,6 +20,7 @@ import {
   Line,
   ContainerLine,
   AlignContent,
+  ContainerGoTo,
 } from "./styles";
 
 import { IPropsPresentation } from "./types";
@@ -38,7 +40,7 @@ const IntroductionPanelPresentation: React.FC<IPropsPresentation> = ({
   return (
     <Content>
       <AlignContent>
-        <ContainerDraw>
+        {/* <ContainerDraw>
           <ContainerDrawVertical>
             <TextPanel color={colorTextPanel} marginTop={20}>
               {t("TEXT_PANEL_DEVELOPER")}
@@ -85,10 +87,10 @@ const IntroductionPanelPresentation: React.FC<IPropsPresentation> = ({
             </ContainerDrawHorizontal>
           </ContainerDrawVertical>
         </ContainerDraw>
-        <CenterLine />
+        <CenterLine /> */}
         <ContainerProfile>
           <ImageProfile src={profilePhoto} />
-          <FisrtNameTextProfile marginTop={40} color={colorTextName}>
+          <FisrtNameTextProfile marginTop={10} color={colorTextName}>
             {firstname}
           </FisrtNameTextProfile>
           <LastNameTextProfile color={colorTextName}>
@@ -102,8 +104,11 @@ const IntroductionPanelPresentation: React.FC<IPropsPresentation> = ({
             >
               {t("SEE_ON_LINKEDIN")}
             </OthersText>
-            <FaLinkedinIn size={20} />
+            <FaLinkedinIn size={16} />
           </ContainerOthers>
+          <ContainerGoTo>
+            <GoTo to="skills" text={t("GO_TO_SKILLS")} />
+          </ContainerGoTo>
         </ContainerProfile>
       </AlignContent>
     </Content>

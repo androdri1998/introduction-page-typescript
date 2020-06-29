@@ -4,6 +4,7 @@ export default {
     NAV_HOME: "Início",
     NAV_ABOUT: "Sobre",
     NAV_SKILLS: "Habilidades",
+    GO_TO_SKILLS: "Ir para skills",
     SEE_ON_LINKEDIN: "Ver no LinkedIn",
     TEXT_PANEL_DEVELOPER: "Developer",
     TEXT_PANEL_BACKEND: "Back-end",

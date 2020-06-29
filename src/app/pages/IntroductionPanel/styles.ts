@@ -11,9 +11,8 @@ export const Content = styled.section`
 export const AlignContent = styled.div`
   display: flex;
   flex: 1;
-  margin-top: 130px;
-  flex-direction: row;
-  justify-content: space-between;
+  margin-top: 40px;
+  justify-content: center;
 `;
 
 export const ContainerDraw = styled.div`
@@ -21,10 +20,6 @@ export const ContainerDraw = styled.div`
   flex: 1;
   align-items: center;
   flex-direction: column;
-
-  @media (max-width: 1040px) {
-    display: none;
-  }
 `;
 
 export const ContainerDrawVertical = styled.div`
@@ -65,9 +60,9 @@ export const ContainerProfile = styled.div`
 
 export const ContainerOthers = styled.div`
   display: flex;
-  flex: 1;
-  margin-top: 70px;
+  margin-top: 30px;
   justify-content: center;
+  align-items: center;
 
   svg {
     transition: 0.8s;
@@ -86,27 +81,17 @@ export const ContainerOthers = styled.div`
         color: ${props.color};
       `};
   }
-
-  @media (max-width: 1040px) {
-    margin-top: 100px;
-  }
 `;
 
 export const ImageProfile = styled.img`
-  height: 320px;
-  width: 320px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
   margin-top: 60px;
-
-  @media (max-width: 1040px) {
-    height: 240px;
-    width: 240px;
-    margin-top: 0px;
-  }
 `;
 
 export const TextNameProfile = styled.p`
-  font-size: 4.2rem;
+  font-size: 2.6rem;
   font-family: font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   transition: 0.8s;
@@ -117,35 +102,19 @@ export const TextNameProfile = styled.p`
     css`
       color: ${props.color};
     `};
-  
-  @media(max-width: 1366px) {
-    font-size: 4rem;
-  }
-
-  @media(max-width: 1040px) {
-    font-size: 3rem;
-  }
 `;
 
 export const OthersText = styled.a`
   text-decoration: none;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: font-family: 'Roboto', sans-serif;
   transition: 0.8s;
   margin-right: 5px;
-  align-self: flex-start;
 `;
 
-export const FisrtNameTextProfile = styled(TextNameProfile)`
-  margin-left: -180px;
-`;
-export const LastNameTextProfile = styled(TextNameProfile)`
-  margin-left: 60px;
-  @media (max-width: 1040px) {
-    font-size: 3rem;
-  }
-`;
+export const FisrtNameTextProfile = styled(TextNameProfile)``;
+export const LastNameTextProfile = styled(TextNameProfile)``;
 
 export const TextPanel = styled.p`
   font-size: 4.8rem;
@@ -159,12 +128,8 @@ export const TextPanel = styled.p`
     css`
       color: ${props.color};
     `};
+`;
 
-  @media(max-width: 1366px) {
-    font-size: 4rem;
-  }
-
-  @media(max-width: 1040px) {
-    font-size: 3.5rem;
-  }
+export const ContainerGoTo = styled.div`
+  margin-top: 70px;
 `;

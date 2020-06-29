@@ -10,8 +10,8 @@ import { IPropsPresentation } from "./types";
 const HeaderPresentation: React.FC<IPropsPresentation> = () => {
   return (
     <ContainerHeader>
-      <Toggle />
       <Nav />
+      <Toggle />
     </ContainerHeader>
   );
 };

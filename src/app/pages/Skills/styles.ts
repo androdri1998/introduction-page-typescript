@@ -74,12 +74,6 @@ export const ContainerOthers = styled.div`
         color: ${props.color};
       `};
   }
-
-  @media (max-width: 1040px) {
-    a {
-      font-size: 1.5rem;
-    }
-  }
 `;
 
 export const OthersText = styled.a`

@@ -18,10 +18,6 @@ export const AlignContent = styled.div`
   margin-top: 150px;
   flex-direction: column;
   align-items: center;
-
-  @media (max-width: 1040px) {
-    margin-top: 140px;
-  }
 `;
 
 export const ContentText = styled.div`
@@ -42,16 +38,6 @@ export const ContentText = styled.div`
       css`
         color: ${props.color};
       `};
-  }
-
-  @media (max-width: 1040px) {
-    padding: 30px;
-    padding-bottom: 0;
-    padding-top: 0;
-
-    p {
-      font-size: 1.2rem;
-    }
   }
 `;
 
@@ -105,14 +91,6 @@ export const ContainerOthers = styled.div`
       css`
         color: ${props.color};
       `};
-  }
-
-  @media (max-width: 1040px) {
-    margin-top: 15px;
-
-    a {
-      font-size: 1.5rem;
-    }
   }
 `;
 

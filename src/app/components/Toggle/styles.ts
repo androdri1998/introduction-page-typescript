@@ -6,34 +6,38 @@ import { themes } from "../../utils/constants";
 const toggleAnimation = {
   [themes.DARK]: keyframes`
     from {
-      margin-left: 84px;
+      margin-left: 32px;
     }
 
     to {
-      margin-left: -55px;
+      margin-left: -42px;
     }
   `,
   [themes.LIGHT]: keyframes`
     from {
-      margin-left: -55px;
+      margin-left: -42px;
     }
 
     to {
-      margin-left: 84px;
+      margin-left: 32px;
     }
   `,
 };
 
-export const ToggleContainer = styled.div``;
+export const ToggleContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 export const ToggleContent = styled.div`
-  padding: 10px 30px;
+  display: flex;
+  align-items: center;
 `;
 
 export const Toggle = styled.div`
   display: flex;
-  height: 40px;
-  width: 80px;
+  height: 25px;
+  width: 50px;
   border-radius: 30px;
   flex-direction: column;
   align-items: center;
@@ -50,7 +54,7 @@ export const ToggleIconLight = styled.div`
   display: flex;
   align-self: center;
   animation: ${toggleAnimation.light} 1s;
-  margin-left: 84px;
+  margin-left: 32px;
   cursor: pointer;
 `;
 
@@ -58,6 +62,6 @@ export const ToggleIconDark = styled.div`
   display: flex;
   align-self: center;
   animation: ${toggleAnimation.dark} 1s;
-  margin-left: -55px;
+  margin-left: -42px;
   cursor: pointer;
 `;

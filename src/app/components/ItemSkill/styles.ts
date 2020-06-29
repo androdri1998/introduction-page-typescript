@@ -42,14 +42,6 @@ export const ContainerPercentage = styled.div`
   min-width: 100px;
   justify-content: flex-start;
   transition: 0.8s;
-
-  @media (max-width: 1040px) {
-    min-width: 60px;
-  }
-
-  @media (max-width: 800px) {
-    display: none;
-  }
 `;
 
 export const DescriptionTechnology = styled.p`

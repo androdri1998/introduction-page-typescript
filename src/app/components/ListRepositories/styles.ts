@@ -4,11 +4,6 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-
-  @media (max-width: 1040px) {
-    justify-content: center;
-    padding: 30px;
-  }
 `;
 export const ContentList = styled.div`
   display: grid;
