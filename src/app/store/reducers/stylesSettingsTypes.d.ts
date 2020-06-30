@@ -24,5 +24,7 @@ export interface IStateStylesSettings {
     color_12: string;
     color_13: string;
     color_14: string;
+    color_15: string;
+    color_16: string;
   };
 }

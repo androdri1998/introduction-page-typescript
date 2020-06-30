@@ -15,6 +15,8 @@ export const colorsTheme = {
   color_12: "#ffffff",
   color_13: "#313131",
   color_14: "rgba(55, 71, 79, .8)",
+  color_15: "rgba(176, 190, 197, 0.1)",
+  color_16: "rgba(196, 196, 196, 0.2)",
 };
 
 // font-family: 'Roboto', sans-serif;

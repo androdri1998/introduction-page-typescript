@@ -1,6 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
 import Header from "../../components/Header";
+import MenuBottom from "../../components/MenuBottom";
 import IntroductionPanel from "../IntroductionPanel";
 import Repositories from "../Repositories";
 import AboutMe from "../AboutMe";
@@ -29,6 +30,8 @@ const HomePresentation: React.FC<IPropsPresentation> = ({
       <Element name="about">
         <AboutMe />
       </Element> */}
+
+      <MenuBottom />
     </Container>
   );
 };

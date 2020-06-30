@@ -11,7 +11,6 @@ export const Content = styled.section`
 export const AlignContent = styled.div`
   display: flex;
   flex: 1;
-  margin-top: 40px;
   justify-content: center;
 `;
 
@@ -55,12 +54,13 @@ export const ContainerProfile = styled.div`
   display: flex;
   flex: 1;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 `;
 
 export const ContainerOthers = styled.div`
   display: flex;
-  margin-top: 30px;
+  margin-top: 15px;
   justify-content: center;
   align-items: center;
 
@@ -87,7 +87,6 @@ export const ImageProfile = styled.img`
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  margin-top: 60px;
 `;
 
 export const TextNameProfile = styled.p`
@@ -131,5 +130,5 @@ export const TextPanel = styled.p`
 `;
 
 export const ContainerGoTo = styled.div`
-  margin-top: 70px;
+  margin-top: 40px;
 `;
