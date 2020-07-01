@@ -4,6 +4,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 import CenterLine from "../../components/CenterLine";
 import GoTo from "../../components/GoTo";
+import useInnerWidth from "../../hooks/useInnerWidth";
 
 import {
   Content,
@@ -35,12 +36,13 @@ const IntroductionPanelPresentation: React.FC<IPropsPresentation> = ({
   colorTextPanel,
   backgroundLineColor,
 }) => {
+  const width = useInnerWidth();
   const { t } = useTranslation();
 
   return (
     <Content>
       <AlignContent>
-        {/* <ContainerDraw>
+        <ContainerDraw>
           <ContainerDrawVertical>
             <TextPanel color={colorTextPanel} marginTop={20}>
               {t("TEXT_PANEL_DEVELOPER")}
@@ -87,7 +89,7 @@ const IntroductionPanelPresentation: React.FC<IPropsPresentation> = ({
             </ContainerDrawHorizontal>
           </ContainerDrawVertical>
         </ContainerDraw>
-        <CenterLine /> */}
+        <CenterLine />
         <ContainerProfile>
           <ImageProfile src={profilePhoto} />
           <FisrtNameTextProfile marginTop={10} color={colorTextName}>
@@ -106,9 +108,11 @@ const IntroductionPanelPresentation: React.FC<IPropsPresentation> = ({
             </OthersText>
             <FaLinkedinIn size={16} />
           </ContainerOthers>
-          <ContainerGoTo>
-            <GoTo to="skills" text={t("GO_TO_SKILLS")} />
-          </ContainerGoTo>
+          {width <= 1200 && (
+            <ContainerGoTo>
+              <GoTo to="skills" text={t("GO_TO_SKILLS")} />
+            </ContainerGoTo>
+          )}
         </ContainerProfile>
       </AlignContent>
     </Content>

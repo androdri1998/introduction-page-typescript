@@ -1,16 +1,31 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { ILineProps, IContainerIconProps } from "./types";
 
+const animationIcon = keyframes`
+  from {
+    margin-top: 35px;
+  }
+
+  50% {
+    margin-top: 40px;
+  }
+
+  to {
+    margin-top: 35px;
+  }
+`;
+
 export const Container = styled.div`
-  display: flex;
+  display: none;
   width: 160px;
-  height: 760px;
+  height: 100%;
   align-self: center;
   justify-content: center;
   flex-direction: column;
+  padding: 120px 0;
 
-  @media (max-width: 1040px) {
-    display: none;
+  @media (min-width: 1200px) {
+    display: flex;
   }
 `;
 
@@ -33,11 +48,11 @@ export const ContainerIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
 
   svg {
     transition: 1.8s;
+    position: absolute;
+    animation: ${animationIcon} 1.2s infinite;
     ${(props: IContainerIconProps) =>
       props.color &&
       css`

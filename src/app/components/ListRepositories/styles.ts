@@ -11,7 +11,7 @@ export const ContentList = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 36px;
 
-  @media (max-width: 1040px) {
+  @media (min-width: 1040px) {
     display: flex;
     overflow-y: auto;
     padding: 10px;

@@ -8,6 +8,10 @@ export const Container = styled.nav`
   height: 70px;
   width: 100%;
   padding: 10px 30px;
+
+  @media (min-width: 801px) {
+    display: none;
+  }
 `;
 
 export const Content = styled.div`

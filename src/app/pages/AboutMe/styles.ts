@@ -24,7 +24,7 @@ export const ContentText = styled.div`
   display: flex;
   margin-top: 60px;
   width: 100%;
-  max-width: 900px;
+  min-width: 900px;
   flex: 1;
   flex-direction: column;
 

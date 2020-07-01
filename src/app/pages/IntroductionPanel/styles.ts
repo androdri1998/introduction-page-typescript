@@ -15,10 +15,15 @@ export const AlignContent = styled.div`
 `;
 
 export const ContainerDraw = styled.div`
-  display: flex;
-  flex: 1;
-  align-items: center;
-  flex-direction: column;
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 
 export const ContainerDrawVertical = styled.div`
@@ -87,6 +92,16 @@ export const ImageProfile = styled.img`
   height: 120px;
   width: 120px;
   border-radius: 50%;
+
+  @media (min-width: 500px) {
+    height: 180px;
+    width: 180px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 320px;
+    width: 320px;
+  }
 `;
 
 export const TextNameProfile = styled.p`
@@ -101,6 +116,13 @@ export const TextNameProfile = styled.p`
     css`
       color: ${props.color};
     `};
+
+  @media (min-width: 500px) {
+    font-size: 3em;
+  }
+  @media (min-width: 1200px) {
+    font-size: 4em;
+  }
 `;
 
 export const OthersText = styled.a`
@@ -110,6 +132,10 @@ export const OthersText = styled.a`
   font-family: font-family: 'Roboto', sans-serif;
   transition: 0.8s;
   margin-right: 5px;
+
+  @media (min-width: 500px) {
+    font-size: 1.2em;
+  }
 `;
 
 export const FisrtNameTextProfile = styled(TextNameProfile)``;

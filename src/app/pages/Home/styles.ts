@@ -96,13 +96,6 @@ export const ContainerOthers = styled.div`
   }
 `;
 
-export const ImageProfile = styled.img`
-  height: 320px;
-  width: 320px;
-  border-radius: 50%;
-  margin-top: 60px;
-`;
-
 export const TextNameProfile = styled.p`
   font-size: 4.2rem;
   font-family: font-family: 'Ubuntu', sans-serif;
