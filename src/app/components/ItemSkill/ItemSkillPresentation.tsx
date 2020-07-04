@@ -23,15 +23,13 @@ const ItemSkillPresentation: React.FC<IPropsPresentation> = ({
         <DescriptionTechnology color={color}>
           {technology}
         </DescriptionTechnology>
+        <DescriptionTechnology color={color}>
+          {percentage}%
+        </DescriptionTechnology>
       </ContainerDescription>
       <ContainerLine>
         <Line width={percentage} background={background}></Line>
       </ContainerLine>
-      <ContainerPercentage>
-        <DescriptionTechnology color={color}>
-          {percentage}%
-        </DescriptionTechnology>
-      </ContainerPercentage>
     </Container>
   );
 };

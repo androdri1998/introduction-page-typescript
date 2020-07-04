@@ -12,8 +12,6 @@ export const Container = styled.main`
   flex: 1;
   flex-direction: column;
   transition: 0.8s;
-  height: 100vh;
-  overflow-y: auto;
   ${(props: IContainerProps) =>
     props.background &&
     css`

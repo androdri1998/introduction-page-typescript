@@ -4,6 +4,10 @@ import { BsChevronCompactDown } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 
 import ListSkills from "../../components/ListSkills";
+import GoTo from "../../components/GoTo";
+
+import useInnerWidth from "../../hooks/useInnerWidth";
+import { goToConstants } from "../../utils/goto.constants";
 
 import {
   Content,
@@ -14,6 +18,7 @@ import {
   OthersText,
   ContainerOthers,
   Footer,
+  ContainerGoTo,
 } from "./styles";
 
 import { IPropsPresentation } from "./types";
@@ -26,6 +31,8 @@ const SkillsPresentation: React.FC<IPropsPresentation> = ({
   linkToLinkedin,
 }) => {
   const { t } = useTranslation();
+  const width = useInnerWidth();
+
   return (
     <Content>
       <AlignContent>
@@ -42,11 +49,15 @@ const SkillsPresentation: React.FC<IPropsPresentation> = ({
             >
               {t("SEE_ON_LINKEDIN")}
             </OthersText>
-            <FaLinkedinIn size={35} />
+            <FaLinkedinIn size={width <= 800 ? 14 : 20} />
           </ContainerOthers>
-          <ContainerIcon color={colorIcon}>
-            <BsChevronCompactDown size={95} />
-          </ContainerIcon>
+
+          <ContainerGoTo>
+            <GoTo
+              to={goToConstants.REPOSITORIES}
+              text={t("GO_TO_REPOSITORIES")}
+            />
+          </ContainerGoTo>
         </Footer>
       </AlignContent>
     </Content>

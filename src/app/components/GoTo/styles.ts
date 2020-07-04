@@ -16,13 +16,28 @@ const animationIcon = keyframes`
 `;
 
 export const Container = styled.div`
+  display: flex;
   cursor: pointer;
   transition: 0.8s;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
+
+export const Text = styled.p`
+  display: flex;
+  transition: 0.8s;
+  align-self: flex-start;
   ${(props: IContainerComponent) =>
     props.color &&
     css`
       color: ${props.color} !important;
     `};
+
+  @media (min-width: 800px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const ContainerIcon = styled.div`

@@ -30,7 +30,7 @@ const RepositoriesPresentation: React.FC<IPropsPresentation> = ({
     <Content>
       <AlignContent>
         <TitlePage color={colorTitle}>{t("NAV_REPOSITORIES")}</TitlePage>
-        <ContentList>
+        {/* <ContentList>
           <ListRepositories repositories={repositories} />
         </ContentList>
         <Footer>
@@ -47,7 +47,7 @@ const RepositoriesPresentation: React.FC<IPropsPresentation> = ({
           <ContainerIcon color={colorIcon}>
             <BsChevronCompactDown size={95} />
           </ContainerIcon>
-        </Footer>
+        </Footer> */}
       </AlignContent>
     </Content>
   );

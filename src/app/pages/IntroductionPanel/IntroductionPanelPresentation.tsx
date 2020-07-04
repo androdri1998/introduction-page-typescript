@@ -5,6 +5,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import CenterLine from "../../components/CenterLine";
 import GoTo from "../../components/GoTo";
 import useInnerWidth from "../../hooks/useInnerWidth";
+import { goToConstants } from "../../utils/goto.constants";
 
 import {
   Content,
@@ -110,7 +111,7 @@ const IntroductionPanelPresentation: React.FC<IPropsPresentation> = ({
           </ContainerOthers>
           {width <= 1200 && (
             <ContainerGoTo>
-              <GoTo to="skills" text={t("GO_TO_SKILLS")} />
+              <GoTo to={goToConstants.SKILLS} text={t("GO_TO_SKILLS")} />
             </ContainerGoTo>
           )}
         </ContainerProfile>

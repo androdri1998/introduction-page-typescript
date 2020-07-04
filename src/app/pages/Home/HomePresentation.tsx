@@ -17,19 +17,18 @@ const HomePresentation: React.FC<IPropsPresentation> = ({
   return (
     <Container background={backgroundColor}>
       <Header />
-
       <Element name="home">
         <IntroductionPanel />
       </Element>
       <Element name="skills" className="element">
         <Skills />
       </Element>
-      {/* <Element name="repositories">
+      <Element name="repositories">
         <Repositories />
       </Element>
-      <Element name="about">
-        <AboutMe />
-      </Element> */}
+      {/* <Element name="about">
+          <AboutMe />
+        </Element> */}
 
       <MenuBottom />
     </Container>

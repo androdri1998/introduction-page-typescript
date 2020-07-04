@@ -2,8 +2,10 @@ import styled, { css } from "styled-components";
 import { ITextNameProfile, IContainerOthers, ITextPanel, ILine } from "./types";
 
 export const Content = styled.section`
+  position: relative;
   display: flex;
   height: 100vh;
+  min-height: 320px;
   flex-direction: row;
   justify-content: space-between;
 `;
@@ -16,7 +18,7 @@ export const AlignContent = styled.div`
 
 export const ContainerDraw = styled.div`
   display: none;
-  padding: 60px;
+  padding: 60px 0px;
 
   @media (min-width: 1200px) {
     display: flex;
@@ -62,7 +64,7 @@ export const ContainerProfile = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 60px;
+  padding: 60px 0px;
 `;
 
 export const ContainerOthers = styled.div`
