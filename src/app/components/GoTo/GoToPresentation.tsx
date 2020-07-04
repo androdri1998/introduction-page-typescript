@@ -13,14 +13,14 @@ const GoToPresentation: React.FC<IPropsPresentation> = ({
   text,
 }) => {
   return (
-    <Container color={colorOthersText}>
-      <Link to={to} spy={true} smooth={true} duration={500}>
+    <Link to={to} spy={true} smooth={true} duration={500}>
+      <Container color={colorOthersText}>
         {text}
-      </Link>
-      <ContainerIcon color={colorIcon}>
-        <BsChevronCompactDown size={40} />
-      </ContainerIcon>
-    </Container>
+        <ContainerIcon color={colorIcon}>
+          <BsChevronCompactDown size={40} />
+        </ContainerIcon>
+      </Container>
+    </Link>
   );
 };
 

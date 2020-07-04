@@ -3,15 +3,15 @@ import { ILineProps, IContainerIconProps } from "./types";
 
 const animationIcon = keyframes`
   from {
-    margin-top: 35px;
+    padding-top: 35px;
   }
 
   50% {
-    margin-top: 40px;
+    padding-top: 40px;
   }
 
   to {
-    margin-top: 35px;
+    padding-top: 35px;
   }
 `;
 
@@ -22,7 +22,8 @@ export const Container = styled.div`
   align-self: center;
   justify-content: center;
   flex-direction: column;
-  padding: 120px 0;
+  padding: 100px 0;
+  padding-top: 120px;
 
   @media (min-width: 1200px) {
     display: flex;
@@ -46,12 +47,14 @@ export const Line = styled.div`
 
 export const ContainerIcon = styled.div`
   display: flex;
+  align-self: center;
   align-items: center;
   justify-content: center;
+  bottom: 0;
 
   svg {
+    cursor: pointer;
     transition: 1.8s;
-    position: absolute;
     animation: ${animationIcon} 1.2s infinite;
     ${(props: IContainerIconProps) =>
       props.color &&

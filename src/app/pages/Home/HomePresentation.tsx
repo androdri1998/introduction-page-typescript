@@ -1,5 +1,5 @@
 import React from "react";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import Header from "../../components/Header";
 import MenuBottom from "../../components/MenuBottom";
 import IntroductionPanel from "../IntroductionPanel";
@@ -21,10 +21,10 @@ const HomePresentation: React.FC<IPropsPresentation> = ({
       <Element name="home">
         <IntroductionPanel />
       </Element>
-      {/*<Element name="skills">
+      <Element name="skills" className="element">
         <Skills />
       </Element>
-      <Element name="repositories">
+      {/* <Element name="repositories">
         <Repositories />
       </Element>
       <Element name="about">

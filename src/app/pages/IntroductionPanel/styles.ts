@@ -16,6 +16,7 @@ export const AlignContent = styled.div`
 
 export const ContainerDraw = styled.div`
   display: none;
+  padding: 60px;
 
   @media (min-width: 1200px) {
     display: flex;
@@ -61,6 +62,7 @@ export const ContainerProfile = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 60px;
 `;
 
 export const ContainerOthers = styled.div`
@@ -99,6 +101,11 @@ export const ImageProfile = styled.img`
   }
 
   @media (min-width: 1200px) {
+    height: 260px;
+    width: 260px;
+  }
+
+  @media (min-width: 1366px) {
     height: 320px;
     width: 320px;
   }
@@ -121,7 +128,10 @@ export const TextNameProfile = styled.p`
     font-size: 3em;
   }
   @media (min-width: 1200px) {
-    font-size: 4em;
+    font-size: 3.5em;
+  }
+  @media (min-width: 1366px) {
+    font-size: 4.2em;
   }
 `;
 
@@ -142,7 +152,7 @@ export const FisrtNameTextProfile = styled(TextNameProfile)``;
 export const LastNameTextProfile = styled(TextNameProfile)``;
 
 export const TextPanel = styled.p`
-  font-size: 4.8rem;
+  font-size: 3.5rem;
   font-family: font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
   transition: 0.8s;
@@ -153,6 +163,10 @@ export const TextPanel = styled.p`
     css`
       color: ${props.color};
     `};
+
+  @media (min-width: 1366px) {
+    font-size: 4.6rem;
+  }
 `;
 
 export const ContainerGoTo = styled.div`

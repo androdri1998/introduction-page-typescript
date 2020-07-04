@@ -16,20 +16,20 @@ const animationIcon = keyframes`
 `;
 
 export const Container = styled.div`
-  a {
-    transition: 0.8s;
-    ${(props: IContainerComponent) =>
-      props.color &&
-      css`
-        color: ${props.color} !important;
-      `};
-  }
+  cursor: pointer;
+  transition: 0.8s;
+  ${(props: IContainerComponent) =>
+    props.color &&
+    css`
+      color: ${props.color} !important;
+    `};
 `;
 
 export const ContainerIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   svg {
     position: absolute;

@@ -9,6 +9,10 @@ export const Container = styled.nav`
   width: 100%;
   padding: 10px 30px;
 
+  a {
+    cursor: pointer;
+  }
+
   @media (min-width: 801px) {
     display: none;
   }
