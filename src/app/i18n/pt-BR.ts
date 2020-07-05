@@ -6,6 +6,7 @@ export default {
     NAV_SKILLS: "Habilidades",
     GO_TO_SKILLS: "Ir para skills",
     GO_TO_REPOSITORIES: "Ir para os repositórios",
+    GO_TO_ABOUT_ME: "Ir para sobre mim",
     SEE_ON_LINKEDIN: "Ver no LinkedIn",
     TEXT_PANEL_DEVELOPER: "Developer",
     TEXT_PANEL_BACKEND: "Back-end",

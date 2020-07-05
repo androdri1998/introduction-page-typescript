@@ -1,9 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { BsChevronCompactDown } from "react-icons/bs";
 import { FiGithub } from "react-icons/fi";
 
+import GoTo from "../../components/GoTo";
 import ListRepositories from "../../components/ListRepositories";
+
+import useInnerWidth from "../../hooks/useInnerWidth";
+import { goToConstants } from "../../utils/goto.constants";
 
 import {
   Content,
@@ -12,8 +15,8 @@ import {
   ContentList,
   ContainerOthers,
   OthersText,
-  ContainerIcon,
   Footer,
+  ContainerGoTo,
 } from "./styles";
 
 import { IPropsPresentation } from "./types";
@@ -26,11 +29,13 @@ const RepositoriesPresentation: React.FC<IPropsPresentation> = ({
   linkToGithub,
 }) => {
   const { t } = useTranslation();
+  const width = useInnerWidth();
+
   return (
     <Content>
       <AlignContent>
         <TitlePage color={colorTitle}>{t("NAV_REPOSITORIES")}</TitlePage>
-        {/* <ContentList>
+        <ContentList>
           <ListRepositories repositories={repositories} />
         </ContentList>
         <Footer>
@@ -42,12 +47,12 @@ const RepositoriesPresentation: React.FC<IPropsPresentation> = ({
             >
               {t("SEE_MORE_ON_LINKEDIN")}
             </OthersText>
-            <FiGithub size={35} />
+            <FiGithub size={width <= 800 ? 14 : 20} />
           </ContainerOthers>
-          <ContainerIcon color={colorIcon}>
-            <BsChevronCompactDown size={95} />
-          </ContainerIcon>
-        </Footer> */}
+          <ContainerGoTo>
+            <GoTo to={goToConstants.ABOUT} text={t("GO_TO_ABOUT_ME")} />
+          </ContainerGoTo>
+        </Footer>
       </AlignContent>
     </Content>
   );

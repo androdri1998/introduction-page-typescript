@@ -35,7 +35,8 @@ export const TitlePage = styled.p`
       color: ${props.color};
     `};
 
-  @media (min-width: 500px) {
+  @media (min-width: 800px) {
+    font-size: 3rem;
   }
 `;
 

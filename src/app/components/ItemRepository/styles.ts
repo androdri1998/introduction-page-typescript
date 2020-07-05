@@ -3,14 +3,16 @@ import { IContainerInfo, ITitleName, IDescription } from "./types";
 
 export const Container = styled.article`
   display: flex;
-  width: 275px;
-  height: 246px;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   border-radius: 15px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
 export const LinkTo = styled.a`
+  width: 275px;
+  height: 246px;
   text-decoration: none;
   display: flex;
   flex-direction: column;

@@ -6,18 +6,22 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 export const ContentList = styled.div`
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 36px;
+  display: flex;
+  overflow-y: auto;
+  padding: 10px;
+
+  a {
+    margin-right: 36px;
+  }
 
   @media (min-width: 1040px) {
-    display: flex;
-    overflow-y: auto;
-    padding: 10px;
+    display: grid;
+    width: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 36px;
 
-    article {
-      margin-right: 36px;
+    a {
+      margin-right: 0;
     }
   }
 `;

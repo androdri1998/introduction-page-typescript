@@ -1,5 +1,5 @@
 import React from "react";
-import { Element, Link } from "react-scroll";
+import { Element } from "react-scroll";
 import Header from "../../components/Header";
 import MenuBottom from "../../components/MenuBottom";
 import IntroductionPanel from "../IntroductionPanel";
@@ -26,9 +26,9 @@ const HomePresentation: React.FC<IPropsPresentation> = ({
       <Element name="repositories">
         <Repositories />
       </Element>
-      {/* <Element name="about">
-          <AboutMe />
-        </Element> */}
+      <Element name="about">
+        <AboutMe />
+      </Element>
 
       <MenuBottom />
     </Container>

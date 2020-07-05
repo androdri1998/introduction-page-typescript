@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { BsChevronCompactDown } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 
 import ListSkills from "../../components/ListSkills";
@@ -14,7 +13,6 @@ import {
   AlignContent,
   TitlePage,
   ContentList,
-  ContainerIcon,
   OthersText,
   ContainerOthers,
   Footer,

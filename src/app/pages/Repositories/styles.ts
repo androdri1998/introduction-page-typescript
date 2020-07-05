@@ -2,37 +2,42 @@ import styled, { css } from "styled-components";
 import { ITitlePage, IContainerIconProps, IContainerOthers } from "./types";
 
 export const Content = styled.section`
+  position: relative;
   display: flex;
   height: 100vh;
+  min-height: 320px;
   flex-direction: column;
+  justify-content: center;
 `;
 
 export const AlignContent = styled.div`
   display: flex;
-  flex: 1;
-  margin-top: 100px;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 `;
 
 export const ContentList = styled.div`
   display: flex;
-  margin-top: 60px;
   width: 100%;
-  max-width: 900px;
-  flex: 1;
+  max-width: 918px;
 `;
 
 export const TitlePage = styled.p`
   font-family: "Roboto", sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   align-self: center;
   transition: 0.8s;
+  margin-bottom: 30px;
   ${(props: ITitlePage) =>
     props.color &&
     css`
       color: ${props.color};
     `};
+
+  @media (min-width: 800px) {
+    font-size: 3rem;
+  }
 `;
 
 export const ContainerIcon = styled.div`
@@ -52,10 +57,9 @@ export const ContainerIcon = styled.div`
 
 export const ContainerOthers = styled.div`
   display: flex;
-  flex: 1;
-  margin-top: 70px;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 
   svg {
     transition: 0.8s;
@@ -74,19 +78,35 @@ export const ContainerOthers = styled.div`
         color: ${props.color};
       `};
   }
+
+  @media (min-width: 800px) {
+    margin-top: 30px;
+  }
 `;
 
 export const OthersText = styled.a`
   text-decoration: none;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: font-family: 'Roboto', sans-serif;
   transition: 0.8s;
-  margin-right: 10px;
+  margin-right: 5px;
+
+  @media (min-width: 800px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Footer = styled.footer`
   display: flex;
   flex-direction: column;
   width: 100%;
+`;
+
+export const ContainerGoTo = styled.div`
+  margin-top: 30px;
+
+  @media (min-width: 800px) {
+    margin-top: 50px;
+  }
 `;

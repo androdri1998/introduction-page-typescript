@@ -6,7 +6,6 @@ import {
   ContainerLine,
   Line,
   ContainerDescription,
-  ContainerPercentage,
 } from "./styles";
 
 import { IPropsPresentation } from "./types";

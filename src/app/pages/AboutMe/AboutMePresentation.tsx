@@ -12,6 +12,7 @@ import {
   OthersText,
 } from "./styles";
 
+import useInnerWidth from "../../hooks/useInnerWidth";
 import { IPropsPresentation } from "./types";
 
 const AboutMePresentation: React.FC<IPropsPresentation> = ({
@@ -22,6 +23,8 @@ const AboutMePresentation: React.FC<IPropsPresentation> = ({
   colorParagraph,
 }) => {
   const { t } = useTranslation();
+  const width = useInnerWidth();
+
   return (
     <Content>
       <AlignContent>
@@ -40,7 +43,7 @@ const AboutMePresentation: React.FC<IPropsPresentation> = ({
             >
               {t("SEE_ON_LINKEDIN")}
             </OthersText>
-            <FaLinkedinIn size={35} />
+            <FaLinkedinIn size={width <= 800 ? 14 : 20} />
           </ContainerOthers>
         </Footer>
       </AlignContent>
