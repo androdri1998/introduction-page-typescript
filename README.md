@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   
 ## Configuring the project  
   
-The project has a file in directory `./src/app` called of `content.example.ts` in this file has a example to configure the project, should be created a file called of `content.ts` with the configuration of the project.
+The project has a file in directory `./src/app/content.example.ts` called of `content.example.ts` in this file has a example to configure the project, should be created a file called of `content.ts` in directory `./src/app/content.ts` and filled with the configuration of the project.
   
 #### `content.example.ts`
 ```
