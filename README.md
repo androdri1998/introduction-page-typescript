@@ -7,6 +7,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Layouts  
   
+<img src="/layout/home_desktop.png" width="500px">  
+<img src="/layout/skills_desktop.png" width="500px">  
+<img src="/layout/about_desktop.png" width="500px">  
+  
+<img src="/layout/home_mobile.png" width="300px">  
+<img src="/layout/skills_mobile.png" width="300px">  
+<img src="/layout/about_mobile.png" width="300px">  
   
 ## Configuring the project  
   
